@@ -6,4 +6,4 @@ Example:
   
   Source & result:
   
-  ![image](https://github.com/HuinanJ/Photo-effects-and-filters/raw/master/result.bmp)
+  ![image](https://github.com/HuinanJ/Photo-effects-and-filters/raw/master/result.jpg)
