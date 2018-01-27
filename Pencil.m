@@ -10,7 +10,7 @@ function [ img ] = Pencil(img, T)
     [sx, sy] = size(img);
     
     % image edge
-    imgedge = uint8((1 - edge(img, 'Canny')) * 255);
+    imgedge = uint8(edge(img, 'Canny') * 5);
     
     % binarized image
     imgbw = im2bw(img, T);
@@ -56,5 +56,5 @@ function [ img ] = Pencil(img, T)
     mask06(imgseg == centers(7,1)) = 1;
     subimg06 = uint8(mask06) .* uint8(sketch06);
     
-    img = subimg00 + subimg01 + subimg02 + subimg03 + subimg04 + subimg05 + subimg06;
+    img = subimg00 + subimg01 + subimg02 + subimg03 + subimg04 + subimg05 + subimg06 + imgedge;
 end
