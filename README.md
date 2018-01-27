@@ -1,6 +1,8 @@
 # Photo-effects-and-filters
 
 Image segmentation + texture merge + edge enhance.
+
 Example:
+  
   Source & result:
-  ![image](https://github.com/HuinanJ/Photo-effects-and-filters.git/result.bmp)
+  ![image](https://github.com/HuinanJ/Photo-effects-and-filters/result.bmp)
