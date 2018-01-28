@@ -5,7 +5,8 @@ Image segmentation + texture merge + edge enhance.
 Example:
   
   Source:
-  ![image](https://github.com/HuinanJ/Photo-effects-and-filters/raw/master/Lenna.png)
+
+  ![image](https://github.com/HuinanJ/Photo-effects-and-filters/raw/master/Lenna.png = 100 x 100)
   
   Pencil sketch filter:
   ![image](https://github.com/HuinanJ/Photo-effects-and-filters/raw/master/pencil.png)
