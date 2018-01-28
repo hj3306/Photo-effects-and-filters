@@ -1,4 +1,4 @@
-function [ img ] = Pencil(img, T)
+function [ img ] = Pencil(img)
 %PENCIL : combine 7 different textures + edge of image
 % Refernece[1] : Automatic Pencil Sketch Generation by using Canny Edges
 %           2017 Fifteenth IAPR International Conference on Machine 
@@ -12,9 +12,6 @@ function [ img ] = Pencil(img, T)
     % image edge
     imgedge = uint8(edge(img, 'Canny') * 5);
     
-    % binarized image
-    imgbw = im2bw(img, T);
- 
     % load textures
     sketch00 = 255 + ones(sx, sy);
     sketch01 = Load_texture('sketch01.png', sx, sy, 0.08) * 1.2;
