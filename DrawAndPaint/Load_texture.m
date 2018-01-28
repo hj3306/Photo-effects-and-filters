@@ -9,11 +9,12 @@ function [ tex ] = Load_texture(str, sx, sy, scale)
     ny = uint32(sy / ty);
     img = zeros(sx, sy);
     tex0 = tex;
-    for i = 1 : nx
+    size(tex0)
+    for i = 1 : ny + 1
         tex = [tex tex0];
     end
     tex0 = tex;
-    for i = 1 : ny
+    for i = 1 : nx + 1
         tex = [tex; tex0];
     end
     tex = tex(1 : sx, 1 : sy);

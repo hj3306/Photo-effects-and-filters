@@ -1,9 +1,11 @@
-function [ img ] = ColorPencil( img )
+function [ img ] = ColorPencil(img, N, scale)
 %CRAYON Summary of this function goes here
-%   Detailed explanation goes here
+%   N: number of colors, don't be too large, it'll take too long
 
     [sx, sy, sz] = size(img);
-    
+    if N > 50
+        N = 50;
+    end
     % image edge
     imgedge = double(edge(img(:,:,1), 'Canny') * 5);
  
@@ -16,16 +18,37 @@ function [ img ] = ColorPencil( img )
     sketch06 = double(Load_texture('sketch06.png', sx, sy, 0.08)) / 255.0;
     
     % image segmentation using kmeans
-    [imgseg, labels, centers] = KmeansColor(img, 6, 50, 283);
+    [imgseg, labels, centers] = KmeansColor(img, N, 50, 283);
     
-    subimg01 = GenerateMask(labels, 1, centers, sketch01);
-    subimg02 = GenerateMask(labels, 2, centers, sketch02);
-    subimg03 = GenerateMask(labels, 3, centers, sketch03);
-    subimg04 = GenerateMask(labels, 4, centers, sketch04);
-    subimg05 = GenerateMask(labels, 5, centers, sketch05);
-    subimg06 = GenerateMask(labels, 6, centers, sketch06);
+    sumimg = zeros(sx, sy, sz);
+    gimg = rgb2gray(uint8(reshape(centers, 1, N, 3)));
+    for i = 1 : N
+        subimg = [];
+        if gimg(1, i) > 210
+            subimg = GenerateMask(labels, i, centers, sketch01, scale);
+        elseif gimg(1, i) > 180
+            subimg = GenerateMask(labels, i, centers, sketch02, scale);
+        elseif gimg(1, i) > 140
+            subimg = GenerateMask(labels, i, centers, sketch03, scale);
+        elseif gimg(1, i) > 100
+            subimg = GenerateMask(labels, i, centers, sketch04, scale);
+        elseif gimg(1, i) > 50
+            subimg = GenerateMask(labels, i, centers, sketch05, scale);
+        else
+            subimg = GenerateMask(labels, i, centers, sketch06, scale);
+        end
+        sumimg = sumimg + subimg;
+    end
     
-    
-    img = uint8(subimg01 + subimg02 + subimg03 + subimg04 + subimg05 + subimg06 + imgedge);
+%     subimg01 = GenerateMask(labels, 1, centers, sketch01);
+%     subimg02 = GenerateMask(labels, 2, centers, sketch02);
+%     subimg03 = GenerateMask(labels, 3, centers, sketch03);
+%     subimg04 = GenerateMask(labels, 4, centers, sketch04);
+%     subimg05 = GenerateMask(labels, 5, centers, sketch05);
+%     subimg06 = GenerateMask(labels, 6, centers, sketch06);
+%     
+%     
+%     img = uint8(subimg01 + subimg02 + subimg03 + subimg04 + subimg05 + subimg06 + imgedge);
+    img = uint8(sumimg + imgedge);
 
 end

@@ -1,4 +1,4 @@
-function [ mask ] = GenerateMask(label, index, color, texture)
+function [ mask ] = GenerateMask(label, index, color, texture, scale)
 %GenerateMask Summary of this function goes here
 %   Detailed explanation goes here
 % color : size 1 x 3, range [0 ~ 255], uint8
@@ -8,9 +8,9 @@ function [ mask ] = GenerateMask(label, index, color, texture)
 temp = zeros(sx, sy);
 temp(label == index) = 1;
 
-texture1 = (1.0 - texture) .* color(index, 1) + texture * 255;
-texture2 = (1.0 - texture) .* color(index, 2) + texture * 255;
-texture3 = (1.0 - texture) .* color(index, 3) + texture * 255;
+texture1 = (1.0 - texture) .* color(index, 1) + texture * scale;
+texture2 = (1.0 - texture) .* color(index, 2) + texture * scale;
+texture3 = (1.0 - texture) .* color(index, 3) + texture * scale;
 
 mask = zeros(sx, sy, 3);
 mask(:, :, 1) = temp .* texture1;
