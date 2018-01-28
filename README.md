@@ -1,7 +1,13 @@
 # Photo-effects-and-filters
 
-Image segmentation + texture merge + edge enhance.
+1) Pencil sketch filter: 
 
+        Image segmentation (K means)  + texture merge + edge.
+        
+2) Color pencil sketch filter: 
+
+        Similar to (1), Image segmentation (K means) + texture merge + edge.
+        
 Example:
   
   Source:
