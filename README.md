@@ -6,7 +6,7 @@ Example:
   
   Source:
 
-  ![image](https://github.com/HuinanJ/Photo-effects-and-filters/raw/master/Lenna.png = 100 x 100)
+  ![image](https://github.com/HuinanJ/Photo-effects-and-filters/raw/master/Lenna.png=100x100)
   
   Pencil sketch filter:
   ![image](https://github.com/HuinanJ/Photo-effects-and-filters/raw/master/pencil.png)
