@@ -1,0 +1,51 @@
+function [tex] = GenerateTexture(sx, sy, t)
+%GENERATETEXTURE 
+%   t: type: [0: cloud, 1: marble, sketch, ...]
+
+%% Texture: cloud
+if t == 0
+    tex = zeros(sx, sy);
+    s = 16;
+    count = 0;
+    while count < 16 && (s < sx && s < sy)
+        init = rand(s, s);
+        
+        G = fspecial('gaussian', [10 10], 1); 
+        init = imfilter(init, G, 'same');
+        
+        init = imresize(init, ceil(max(sx / s, sy / s)), 'bicubic');
+        init = init(1:sx, 1:sy);
+        
+        tex = tex + double(init);
+        s = s * 2;
+        count = count + 1;
+    end
+    if count > 0
+        tex = tex / count;
+    end
+end
+
+%% Texture: marble
+if t == 1
+
+    temp01 = zeros(100, 100);
+    for i = 1 : 100
+        for j = 1 : 100
+            temp01(i, j) = 255 * sin(i + j);
+        end
+    end
+    temp02 = zeros(100, 100);
+    for i = 1 : 100
+        for j = 1 : 100
+            temp02(i, j) = i * 5.0 / 100.0 + j * 10.0 / 100.0 + 5.0 * temp01(i, j)
+        end
+    end
+    xyValue = x * xPeriod / noiseWidth + y * yPeriod / noiseHeight + turbPower * turbulence(x, y, turbSize) / 256.0;
+    tex = temp01;
+    tex = 255 - uint8(tex);
+    tex = imresize(tex, ceil(max(sx / 100, sy / 100)));
+    tex = tex(1:sx, 1:sy);
+end
+
+end
+
