@@ -12,32 +12,29 @@ Example:
   
   <html>
   <body>
-
-<table border="1">
+  <table border="1">
+            
   <tr>
-    <th>Month</th>
-    <th>Savings</th>
+  <th>Source</th>
+  <th>Pencil Sketch</th>
+  <th>Color Pencil</th>
   </tr>
+      
   <tr>
-    <td>January</td>
-    <td>$100</td>
+  <td>
+    <img src="https://github.com/HuinanJ/Photo-effects-and-filters/raw/master/images/Lenna.png" width="20%" height="20%">
+  </td>
+  <td>
+    <img src="https://github.com/HuinanJ/Photo-effects-and-filters/raw/master/images/pencil.png" width="20%" height="20%"> 
+  </td>
+  <td>
+    <img src="https://github.com/HuinanJ/Photo-effects-and-filters/raw/master/images/colorPencil.png" width="20%" height="20%"> 
+  </td>
   </tr>
-</table>
 
-</body>
-</html>
-  Source:
-  
-  <img src="https://github.com/HuinanJ/Photo-effects-and-filters/raw/master/images/Lenna.png" width="20%" height="20%">
-  
-  Pencil sketch filter:
-
-  <img src="https://github.com/HuinanJ/Photo-effects-and-filters/raw/master/images/pencil.png" width="20%" height="20%">
-  
-  Color pencil sketch filter:
-
-  <img src="https://github.com/HuinanJ/Photo-effects-and-filters/raw/master/images/colorPencil.png" width="20%" height="20%">
-  
+  </table>
+  </body>
+  </html>
 
 Texture Generation:
 
