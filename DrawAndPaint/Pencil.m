@@ -14,12 +14,12 @@ function [ img ] = Pencil(img)
     
     % load textures
     sketch00 = 255 + ones(sx, sy);
-    sketch01 = Load_texture('sketch01.png', sx, sy, 0.08) * 1.2;
-    sketch02 = Load_texture('sketch02.png', sx, sy, 0.08);
-    sketch03 = Load_texture('sketch03.png', sx, sy, 0.08);
-    sketch04 = Load_texture('sketch04.png', sx, sy, 0.08);
-    sketch05 = Load_texture('sketch05.png', sx, sy, 0.08);
-    sketch06 = Load_texture('sketch06.png', sx, sy, 0.08);
+    sketch01 = Load_texture('sketch01.png', sx, sy, 0.08, 1) * 1.2;
+    sketch02 = Load_texture('sketch02.png', sx, sy, 0.08, 1);
+    sketch03 = Load_texture('sketch03.png', sx, sy, 0.08, 1);
+    sketch04 = Load_texture('sketch04.png', sx, sy, 0.08, 1);
+    sketch05 = Load_texture('sketch05.png', sx, sy, 0.08, 1);
+    sketch06 = Load_texture('sketch06.png', sx, sy, 0.08, 1);
     
     % image segmentation using kmeans
     seed = [372, 64, 8, 19, 55, 892, 773, 54];

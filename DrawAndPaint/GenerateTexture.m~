@@ -1,0 +1,21 @@
+function [tex] = GenerateTexture(str, sx, sy)
+%GENERATETEXTURE 
+%   str: type: [cloud, marble, sketch, ...]
+
+if str == 'cloud'
+    tex = zeros(sx, sy);
+    st = 50;
+    init = rand(st, st);
+    init
+    scale = ceil(max(sx, sy) / st);
+    for i = 1 : 32
+        init = imresize(init, scale, 'bicubic');
+        init = init(1 : sx, 1 : sy);
+        tex = (tex + double(init)) / 2.0;
+        init = init(1:st, 1:st);
+    end
+end
+
+
+end
+

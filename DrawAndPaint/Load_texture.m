@@ -1,4 +1,4 @@
-function [ tex ] = Load_texture(str, sx, sy, scale)
+function [ tex ] = Load_texture(str, sx, sy, scale, isnoise)
 %LOAD_TEXTURE Summary of this function goes here
 %   Detailed explanation goes here
     tex = imread(str);
@@ -18,7 +18,9 @@ function [ tex ] = Load_texture(str, sx, sy, scale)
         tex = [tex; tex0];
     end
     tex = tex(1 : sx, 1 : sy);
-    tex = imnoise(tex, 'gaussian');
+    if isnoise == 1
+        tex = imnoise(tex, 'gaussian');
+    end
 end
  
 
