@@ -21,3 +21,14 @@ Example:
   Color pencil sketch filter:
 
   <img src="https://github.com/HuinanJ/Photo-effects-and-filters/raw/master/images/colorPencil.png" width="20%" height="20%">
+  
+
+Texture Generation:
+
+  1) Cloud:
+  
+  <img src="https://github.com/HuinanJ/Photo-effects-and-filters/raw/master/images/cloud.png" width="20%" height="20%">
+  
+  2) Turbulence:
+  
+  <img src="https://github.com/HuinanJ/Photo-effects-and-filters/raw/master/images/turbulence.png" width="20%" height="20%">
