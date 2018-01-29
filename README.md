@@ -1,5 +1,7 @@
 # Photo-effects-and-filters
 
+[Filters]
+
 1) Pencil sketch filter: 
 
         Image segmentation (K means)  + texture merge + edge.
@@ -36,7 +38,18 @@ Example:
   </body>
   </html>
 
-Texture Generation:
+[Texture Generation]
+
+1) Cloud: 
+
+        Multi-scale-blurred-noise combinition.
+
+2) Turbulence: 
+
+        Add 'noise' to sin waves.
+
+Example:
+
   <html>
   <body>
   <table border="1">
