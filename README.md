@@ -22,13 +22,13 @@ Example:
       
   <tr>
   <td>
-    <img src="https://github.com/HuinanJ/Photo-effects-and-filters/raw/master/images/Lenna.png" width="20%" height="20%">
+    <img src="https://github.com/HuinanJ/Photo-effects-and-filters/raw/master/images/Lenna.png">
   </td>
   <td>
-    <img src="https://github.com/HuinanJ/Photo-effects-and-filters/raw/master/images/pencil.png" width="20%" height="20%"> 
+    <img src="https://github.com/HuinanJ/Photo-effects-and-filters/raw/master/images/pencil.png"> 
   </td>
   <td>
-    <img src="https://github.com/HuinanJ/Photo-effects-and-filters/raw/master/images/colorPencil.png" width="20%" height="20%"> 
+    <img src="https://github.com/HuinanJ/Photo-effects-and-filters/raw/master/images/colorPencil.png"> 
   </td>
   </tr>
 
