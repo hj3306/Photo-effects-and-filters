@@ -37,11 +37,24 @@ Example:
   </html>
 
 Texture Generation:
+  <html>
+  <body>
+  <table border="1">
+            
+  <tr>
+  <th>Cloud</th>
+  <th>Turbulence</th>
+  </tr>
+      
+  <tr>
+  <td>
+    <img src="https://github.com/HuinanJ/Photo-effects-and-filters/raw/master/images/cloud.png">
+  </td>
+  <td>
+    <img src="https://github.com/HuinanJ/Photo-effects-and-filters/raw/master/images/turbulence.png">
+  </td>
+  </tr>
 
-  1) Cloud:
-  
-  <img src="https://github.com/HuinanJ/Photo-effects-and-filters/raw/master/images/cloud.png" width="20%" height="20%">
-  
-  2) Turbulence:
-  
-  <img src="https://github.com/HuinanJ/Photo-effects-and-filters/raw/master/images/turbulence.png" width="20%" height="20%">
+  </table>
+  </body>
+  </html>
