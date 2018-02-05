@@ -1,4 +1,4 @@
-
+addpath('../Common');
 
 figure(1);
 img = imread('Lenna.png');
