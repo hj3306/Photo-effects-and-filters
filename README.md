@@ -48,6 +48,11 @@ Example:
 
         Add 'noise' to sin waves.
 
+3) Watercolor:
+        
+        An RGB water color brush.
+        
+        
 Example:
 
   <html>
@@ -57,6 +62,7 @@ Example:
   <tr>
   <th>Cloud</th>
   <th>Turbulence</th>
+  <th>Watercolor Brush</th>
   </tr>
       
   <tr>
@@ -65,6 +71,9 @@ Example:
   </td>
   <td>
     <img src="https://github.com/HuinanJ/Photo-effects-and-filters/raw/master/images/turbulence.png">
+  </td>
+  <td>
+    <img src="https://github.com/HuinanJ/Photo-effects-and-filters/raw/master/images/watercolor_blue.png">
   </td>
   </tr>
 
